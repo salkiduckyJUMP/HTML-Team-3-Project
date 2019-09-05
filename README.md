@@ -1,2 +1,6 @@
 # HTML-Team-3-Project
-Collaborative Project---View original project here: https://github.com/JUMP-2019-HTML-Project-Team-3/HTML-Team-3-Project My main coding work was in RebeccaPage.html.
+<<<<<<< HEAD
+=======
+JUMP 2019 HTML Restaurant pages
+These are free standing, static html pages, that link to a common index page, called index.html
+>>>>>>> 42e07fd001ee69966dee881b17b666c7774a4f22

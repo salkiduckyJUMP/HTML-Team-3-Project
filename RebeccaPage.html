@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<!-- NavBar Start -->
+<head>
+    <style>
+    a:link {
+      color: white;
+      background-color: rgb(165, 23, 23);
+      text-decoration: none;
+    }
+    a:visited {
+      color: pink;
+      background-color: rgb(165, 23, 23);
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      background-color: rgb(165, 23, 23);
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: rgb(165, 23, 23);
+      text-decoration: underline;
+    }
+    </style>
+    </head>
+<div style="background-color:rgb(165, 23, 23);color:white;padding:20px;">
+<nav>
+    <ul>
+    <h2><strong>Look at Our Restaurants!.com</strong><b>&emsp;</h2>    
+    <li><a href="Index.html"><strong>Home</strong></a><b>&emsp;</b>
+    <a href="greg.html"><strong>Greg's Page</strong></a><b>&emsp;</b>
+    <a href="Omran_webpage.html"><strong>Chef Recipe</strong></a><b>&emsp;</b>
+    <strong>Salki's Noms Cafe</strong><b>&emsp;</b></li>
+    </ul>
+</nav>
+</div>
+<!-- Nav bar end -->
+   <!-- Head contains meta-data which is not displayed -->    
+   <head>
+      <!--Controls how certain elements look-->
+      <!--Contains internal CSS properties and values-->
+      <style>
+
+          .inline-center {
+              text-align: center; 
+          }
+
+          .inline-image-center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+          }
+
+          table, th, td {
+              border: 1px solid black;
+          }  
+
+          th {
+              background-color:rebeccapurple;
+          }
+
+          td {
+              background-color:skyblue;
+          }
+
+      </style>
+      <!--Line 70 is an element with a beginning title tag and an end title tag-->
+      <title>Salki's Noms</title>
+  </head>
+  <body>
+    <!--Canvas can draw graphics on the fly using JavaScript-->
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+                
+      <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Georgia";
+      var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+      gradient.addColorStop("0", "mediumturquoise");
+      gradient.addColorStop("0.5", "fuchsia");
+      gradient.addColorStop("1.0", "indigo");
+
+      ctx.strokeStyle = gradient;
+      ctx.strokeText("Salki's Noms",10,50);
+      </script>
+    <!-- Uses unique id attributes given to elements to navigate between elements on the page-->
+    <a href="#menu">View Menu</a>
+    <a href ="#review">Leave a Review</a>
+    <img class = 'inline-image-center'src = 'http://storage.proboards.com/6157666/avatar/FmeitUEDZkRPHQSmUlFy.png' src = 'logo'>
+    <hr>
+
+    <!--Paragraph style is centered because of internal CSS style element in Head section-->
+    <p class = 'inline-center'>Come on down to Salki's Noms to get some food!</p>
+
+    <!--Youtube videos can be embedded in HTML pages with the embed link-->
+    <iframe class = 'inline-image-center'width="560" height="315" src="https://www.youtube.com/embed/5FKw7-SC7VI" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <hr>
+
+    <!--Menu heading has an id of menu, used in page navigation-->
+    <h1 id="menu" class = 'inline-center'> Menu </h1>
+
+    <!--Table element to represent the menu of the restaurant-->
+    <!--Note that the options given in style for table heading and table data are used to color the cells-->
+    <table style="width:100%">
+            <tr>
+              <th>Name</th>
+              <th>Description</th> 
+              <th>Picture</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Cat Cookies</td>
+              <td>Cat-shaped cookies with icing topping</td>
+              <td><img class = 'inline-image-center'  src = "http://www.simpleimageresizer.com/_uploads/photos/c69c74ec/bfb4bcf43269d70e3693016364e32029_150x106.jpg"></td>
+              <td>$3.00 for 5</td>
+            </tr>
+            <tr>
+              <td>Rainbow Waffles</td>
+              <td>Stack of seven waffles in good ol' ROYGBIV</td>
+              <td><img class = 'inline-image-center'  src = "http://www.simpleimageresizer.com/_uploads/photos/c69c74ec/rainbowwaffle2_150x106.jpg"></td>
+              <td>$5.00</td>
+            </tr>
+            <tr>
+              <td>Mini Breakfast</td>
+              <td>For when someone just wants a 'little' breakfast; bacon and eggs</td>
+              <td><img class = 'inline-image-center'  src = "http://www.simpleimageresizer.com/_uploads/photos/c69c74ec/maxresdefault_150x106.jpg"></td>
+              <td>$3.00</td>
+            </tr>
+            <tr>
+                <td>Bear Sundae</td>
+                <td>Hot fudge sundae with oreo-cookie ears and a chocolate drizzle face</td>
+                <td><img class = 'inline-image-center'  src = "http://www.simpleimageresizer.com/_uploads/photos/c69c74ec/14420058567_a92682001c_z_150x106.jpg"></td>
+                <td>$7.50</td>
+            </tr>
+            <tr>
+              <td>Pusheen Macarons</td>
+              <td>Limited Time Only: delicious macarons inspired by Pusheen!</td>
+              <td><img class = 'inline-image-center'  src = "http://www.simpleimageresizer.com/_uploads/photos/c69c74ec/9d116bb32549338fb7a6884d56ffb18a_150x106.jpg"></td>
+              <td>$10.00 for 12</td>
+          </tr>
+          </table>
+
+    <hr>
+    <h1 class = 'inline-center'> Leave a Review! </h1>
+    <p class = 'inline-center'>If you've sampled any of our treats, please leave a review and tell us what you think!</p>
+
+    <!--Form using various input types; text, radio, number and a non-working submit button-->
+    <form class = 'inline-center' id = "review">
+            Nickname:<br>
+            <input type="text" name="nickname"><br>
+            What Did You Try?<br>
+            <input type="radio" name="menuitem" value="Cat Cookies" checked> Cat Cookies <br>
+            <input type="radio" name="menuitem" value="Rainbow Waffles"> Rainbow Waffles <br>
+            <input type="radio" name="menuitem" value="Mini Breakfast"> Mini Breakfast <br>
+            <input type="radio" name="menuitem" value="Bear Sundae"> Bear Sundae <br>
+            <input type="radio" name="menuitem" value="Pusheen Macarons"> Pusheen Macarons <br>
+            Rating Between 1(terrible) to 5(amazing): <br>
+            <input type="number" name="rating" min="1" max="5"> <br>
+            <input type="submit" value="Submit">
+          </form>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<!-- NavBar Start -->
+<head>
+        <style>
+        a:link {
+          color: white;
+          background-color: rgb(165, 23, 23);
+          text-decoration: none;
+        }
+        a:visited {
+          color: pink;
+          background-color: rgb(165, 23, 23);
+          text-decoration: none;
+        }
+        a:hover {
+          color: red;
+          background-color: rgb(165, 23, 23);
+          text-decoration: underline;
+        }
+        a:active {
+          color: yellow;
+          background-color: rgb(165, 23, 23);
+          text-decoration: underline;
+        }
+        </style>
+        </head>
+<div style="background-color:rgb(165, 23, 23);color:white;padding:20px;">
+    <nav>
+        <ul>
+        <h2><strong>Look at Our Restaurants!.com</strong><b>&emsp;</h2>    
+        <li><a href="Index.html"><strong>Home</strong></a><b>&emsp;</b>
+        <strong>Greg's Page</strong><b>&emsp;</b>
+        <a href="Omran_webpage.html"><strong>Chef Recipe</strong></a><b>&emsp;</b>
+        <a href="RebeccaPage.html"><strong>Salki's Noms Cafe</strong></a><b>&emsp;</b></li>
+        </ul>
+    </nav>
+</div>
+<!-- Nav bar end -->
+
+<!--Feature 5 Layout (Flex box Layout)-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Feature 2 Formatting Added Bold in h2-->
+<!--Feature 6 Symbols added the &copy-->
+
+    <body>
+        <h1><b>Order Food &copy</b></h1>
+        <section>
+        <aside>
+        <p>
+        <!--Feature 7 Forms-->
+        <form>
+        Name:<br>
+        <input type="text" name="firstname"><br>
+        Deliver Latitude:<br>
+        <input type="text" name="latDeliv" id="latDelivid"><br>
+        Deliver Longitude:<br>
+        <input type="text" name="longDeliv" id="longDelivid">
+        </form>
+
+        <!--Feature 9 SVG Scalable Vector Graphics-->
+        <!--Feature 10 OnClick Event-->
+        <svg width="100" height="100" onclick="getLocation()">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="lightblue" />
+            <text fill="yellow" font-size="16" font-family="Verdana" x="12" y="55">Location</text>
+        </svg>
+
+        </aside>
+        <article>
+            <!--Feature 4 Lists-->
+            <!--Feature 1 Attributes-->
+            <!--Feature 2 Formating The sub the del-->
+            <nav>
+            <ul id-="ul1">
+                <li id="li1"><i>Pancakes </i><sub>$ 9.99</sub></li>
+                <li id="li2"><i>Bacon Egg Cheese </i><sub>$ 5.99</sub></li>
+                <li id="li3"><i>Omelete </i><sub>$ 9.99</sub></li>
+                <li id="li1"><i>Tacos </i><sub>$ 7.99</sub></li>
+                <li id="li2"><i><del>Burgers <sub>$ 12.99</sub></del></i></li>
+                <li id="li3"><i>Milkshakes </i><sub>$ 4.50</sub></li>
+                <li id="li1"><i>Buffalo Wings <sub>$ 10</sub></i></li>
+                <li id="li2"><i><del>Baked Ziti <sub>$ 8.99</sub></del></i></li>
+                <li id="li3"><i>Soda </i><sub>$ 1.25</sub></li>
+            </ul>
+        </nav>
+        </p>
+        </article>
+        
+    </section>
+        <footer>
+        <p>
+            Contact Us
+        </p>
+        </footer>
+    </body>
+
+<!--Feature 3 CSS Cascading Style Sheets-->
+<style>
+h1{
+    text-align: center;
+}
+
+section{
+    display: -webkit-flex;
+    display: flex;
+}
+
+footer{
+	padding-top: 20px;
+	padding-bottom: 20px;
+    text-align: center;
+    background-color: grey;
+}
+
+aside{
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    float: left;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 30%;
+    background-color: grey;
+}
+
+article{
+-webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background: grey;
+  float: right;
+  width: 70%;
+}
+
+#ul1{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#li1, #li2, #li3{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+#li1:hover{
+    background-color: red;
+}
+
+#li2:hover{
+    background-color: white;
+}
+
+#li3:hover{
+    background-color: blue;
+}
+
+@media (max-width: 600px){
+    section{
+    -webkit-flex-direction:column;
+    flex-direction: column;
+}
+}
+</style>
+
+<!--Feature 8 Geolocation-->
+<script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+        var lat = document.getElementById("latDelivid");
+        var long = document.getElementById("longDelivid");
+        lat.value =  position.coords.latitude;
+        long.value = position.coords.longitude;
+        }
+
+        //Feature 8 Input Value Attribute
+        function addFood1()
+        {
+            var tmp = document.getElementById("li1");
+            tmp.style.backgroundColor = red;
+        }
+</script>
+
+</html>
